@@ -1,0 +1,226 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.header {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #2b5876, #4e4376);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Founder Section */
+.founder-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.founder-info {
+    padding-right: 20px;
+}
+
+.founder-career {
+    border-left: 2px solid #eee;
+    padding-left: 30px;
+}
+
+.career-item {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.career-item::before {
+    content: '';
+    position: absolute;
+    left: -36px;
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    background: #4e4376;
+    border-radius: 50%;
+}
+
+/* Investors Section */
+.investors-section {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.investors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    align-items: center;
+    justify-items: center;
+}
+
+.investor-logo {
+    width: 200px;
+    height: 80px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.investor-logo:hover {
+    transform: scale(1.05);
+}
+
+/* Hiring Section */
+.hiring-section {
+    background: #f8f9fa;
+    padding: 60px 0;
+    margin-top: 60px;
+}
+
+.hiring-content {
+    text-align: center;
+}
+
+.hiring-title {
+    font-size: 36px;
+    margin-bottom: 30px;
+    background: linear-gradient(to right, #2b5876, #4e4376);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Contact Section */
+.contact-section {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    padding: 4rem;
+    border-radius: 20px;
+    margin: 6rem auto;
+    max-width: 800px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    background: linear-gradient(45deg, #2b5876 30%, #4e4376 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: #4e4376;
+}
+
+.contact-content {
+    flex: 1;
+}
+
+.contact-label {
+    font-size: 0.9rem;
+    color: #636e72;
+    margin-bottom: 0.25rem;
+}
+
+.contact-value {
+    font-size: 1.1rem;
+    color: #2d3436;
+}
+
+.contact-value a {
+    color: #4e4376;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-value a:hover {
+    color: #2b5876;
+}
+
+.contact-map {
+    grid-column: span 2;
+    margin-top: 1rem;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 12px;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .founder-section {
+        grid-template-columns: 1fr;
+    }
+
+    .founder-career {
+        border-left: none;
+        padding-left: 0;
+        border-top: 2px solid #eee;
+        padding-top: 30px;
+    }
+
+    .career-item::before {
+        left: -6px;
+    }
+
+    .investors-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .investor-logo {
+        width: 150px;
+        height: 60px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-map {
+        grid-column: span 1;
+    }
+
+    .contact-section {
+        padding: 2rem;
+        margin: 3rem auto;
+    }
+}
